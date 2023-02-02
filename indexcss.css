@@ -1,0 +1,96 @@
+body{margin: 0;}
+/*For Navbar*/
+.navbar{
+    width: 100%;
+    background-color: chocolate;
+    overflow:auto;
+    position: fixed;
+    top: 0;
+}
+.navbar h2{
+    padding-left: 5%;
+    
+}
+.navbar ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    width: 100%;
+    background-color: aqua;
+}
+.navbar li{
+    float: left;
+    border-right: 1px solid #bbb;
+}
+.navbar li a:last-child{
+    border-right: none;
+}
+.navbar li a{
+    display: block;
+    color: black;
+    padding: 14px 16px;
+    text-align: center;
+    text-decoration: none;
+}
+.navbar li a:hover{
+    background-color: beige;
+}
+
+/*Main div i.e. everything under navbar except footer*/
+.main{
+    margin-top: 112px;
+    height: 100%;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+/*all the div tags in main class*/
+.card{
+    background-color: yellow;
+    padding: 5%;
+}
+/*all the tags are covered in this*/
+*{
+    box-sizing: border-box;
+}
+/*styling the break line between each division line*/
+hr{
+    border: 1px solid #f00
+}
+/*This is for the biography section*/
+.row::after{
+    content:"";
+    display: table;
+    clear: both;
+}
+.column{
+    float: left;
+    padding: 5%;
+}
+.left{width: 30%; background-color: blueviolet;}
+.right{width: 70%; background-color: chartreuse;}
+.subrow::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+.subcol{
+    float: left;
+    padding: 5%;
+}
+.l{
+    width: 40%;
+    background-color: pink;
+}
+.l ul{
+    list-style-type: square;
+}
+.r{
+    width: 60%;
+    background-color: peru;
+}
+.r ul{
+    list-style-image: url('hat.png');
+    
+}
+/**/
