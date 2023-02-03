@@ -16,15 +16,16 @@ body{margin: 0;}
 .navbar ul{
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding-right: 2%;
     overflow: hidden;
     width: 100%;
     background-color: #f3e0d3;
 }
 .navbar li{
+    padding-left: 1%;
     float: left;
-    border-top: 1px  #2C3531;
-    border-bottom: 1px #2C3531;
+    border-top: 1px solid #2C3531;
+    border-bottom: 1px solid #2C3531;
 }
 .res{
     border: 1px solid #2C3531;
