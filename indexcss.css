@@ -2,7 +2,7 @@ body{margin: 0;}
 /*For Navbar*/
 .navbar{
     width: 100%;
-    background-color: #F5F5DC;
+    background-color: #f3e0d3;
     overflow:auto;
     position: fixed;
     top: 0;
@@ -19,11 +19,12 @@ body{margin: 0;}
     padding: 0;
     overflow: hidden;
     width: 100%;
-    background-color: #F5F5DC;
+    background-color: #f3e0d3;
 }
 .navbar li{
     float: left;
-    border-right: 1px solid #2C3531;
+    border-top: 1px  #2C3531;
+    border-bottom: 1px #2C3531;
 }
 .res{
     border: 1px solid #2C3531;
@@ -134,4 +135,16 @@ hr{
 .r ul{
     list-style-image: url('hat.png');
     
+}
+.footer{
+    width: 100%;
+    text-align: center;
+    background-color: #f3e0d3;
+    padding: 10px;
+}
+.footer img{
+    height: 30px;
+    padding-left: 15px;
+
+    width: auto;
 }
