@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Facial Expression Detection</title>
+        <link rel="stylesheet" href="blogcss.css">
+    </head>
+    <body>
+        <header>
+            <h1><img src="pic.jpg" class="image" alt="'My Logo">Sumedh Wairagade</h1>
+            <p class="heade">Facial Expression Detection using Keras Sequential Model</p>
+            <a href="https://sumedhwairagade.github.io/portfolio/" class="linke">CV</a>
+        </header>
+        <main>
+            <h2><b>Facial Expression Detection</b></h2>
+            <p class="tex">I have build a model to detect Facial Expressions from an image dataset given on Kaggle, <a src="https://www.kaggle.com/datasets/samaneheslamifar/facial-emotion-expressions">facial-emotion-expressions dataset</a>. I build a model to detect emotions expressed in an image from the kaggle Dataset. Facial emotion recognition has been a popular area of research in computer vision field. The ability to detect and classify emotions from facial expressions can have a wide range of applications, including affective computing, human-computer interaction, and psychological studies. In this post, we will build a facial emotion recognition model using Keras, a popular deep learning library.</p>
+            <h3><b>First Step:</b></h3>
+            <p class="tex">We load a dataset from kaggle to train our model. Our Dataset has images for seven different emotions: angry, disgust, fear, happy, sad, surprise, and neutral. We just saved the Dataset in our google drive, to access it on the Google Colab but there is one another way of doing it by creating an API for accessing the Kaggle Dataset online, you can see it <a src="https://www.kaggle.com/general/74235">here</a>.</p>
+            <h3><b>Second Step:</b></h3>
+            <p class="tex">Now, we will use the Python libraries to load and preprocess the data. We will use Seaborn, a data visualization library, to plot the images from the dataset. We will also use glob, pathlib, and cv2 libraries to load the image data and perform data augmentation.</p>
+            <p class="tex">We understand our Data and convert it into a Dataframe using the Function that is designed and provided <a src="https://www.kaggle.com/code/anand1994sp/facial-expression">here</a>, using the pandas library we can develop a dataframe from a raw image Dataset labels of the image being known.</p>
+            <p class="tex">Data augmentation is a technique used to artificially increase the size of the dataset by generating new images from the existing ones. This is done by applying various transformations to the original images, such as rotating, flipping, or zooming. Data augmentation is a crucial step in training deep learning models, as it helps to prevent overfitting and improves the generalization ability of the model.</p>                
+            <p class="tex">After loading and preprocessing the data, we will split the dataset into training and testing sets. We will use a sequential model in Keras to build our facial emotion recognition model. The sequential model is a linear stack of layers, and we will add several layers to our model, including dense, conv2d, max pooling, dropout, and flatten layers. You can see a sample of our data below:</p>
+            <div><img src="Dataset.png" class="datasetimg" alt="Dataset_image"></div>
+            <p class="tex">We can also visualize the statistics of our dataset where we can see how the data for different class is distributed. We have generated a plot to represent the freqency of a classes in our dataset. The image produced is displayed below:</p>
+            <div><img src="Frequency.png" class="classimg" alt="Class_freq_image"></div>
+            <div><img src="Classes.png" class="classesimg" alt="Classes_freq_image"></div>
+            <h3><b>Next Step:</b></h3>
+            <p class="tex">We start building the model First we initialize our model with a sequential function in Keras. Then we add InputLayer with the shape of the input, then three combinations of Conv2d Layer and Maxpooling2d Layer,then Flatten layer then couple of Dense Layer and then a Dropout layer just before the output Dense Layer with the output dimension having the number of classes we are gonna have.</p>
+            <p class="tex">Now we Compile the model along with providing the loss function and the optimizer to our model. We used Adam optimizer and the relu activation function for our model. The Adam optimizer is an extension to stochastic gradient descent, which is a popular optimization algorithm used in deep learning. The relu activation function is a commonly used activation function in deep neural networks, which introduces non-linearity into the network and helps to improve the performance of the model. We will also add an early stopping callback to our model to stop training if the validation loss does not improve for a certain number of epochs. This is a useful technique to prevent overfitting and improve the generalization ability of the model.</p>
+            <div><img src="ViewOfModel.png" class="modelimg" alt="Model_img"></div>
+            <p class="tex">While Training the model we can see the precision and accuracy of the model in each epoch. We need to adjust the values of layer sizes accordingly to make our model perform better. If we use the optimum settings for every layer we would not have to use so much layers for prediction of this 96*96 sized image. I think i have overloaded my model with weights but you can try using less layers or less weights in each layer.</p>
+            <p class="tex">We also evaluate our model on the Validation set and enter data in confusion matrix to visualize the performance of the model. We also labeled the dataset into a data frame to make it easier to analyze and understand the dataset.</p>
+            <h3><b>Motivation:</b></h3>
+            <p class="tex">This was an assignment to understand and implement the keras library. The best part of building the model is to understand the data we are working on and then build a model for the data to get better results than developing just a generic model for all purposes. The images datasets are sometimes harder to work with and fun to understand. I have generated just some random images to understand the data, like the the ones given below:</p>
+            <div><img src="SampleTrain.png" class="sampleTr" alt="Model_img">
+                <img src="SampleValidation.png" class="sampleVal" alt="Model_img">
+            </div>
+            <p class="tex">These two images are from the samples of Training and Validation Dataset.</p>
+            <h3><b>Conclusion and Future Scope:</b></h3>
+            <p class="tex">I experienced how to preprocess the data to build an Deep neural networks model in this assignment and got to know how I can tune my model to perform better. Also i made an image using Seaborn, cv2, and Matplotlib libraries in Google Colab <a src="https://colab.research.google.com/drive/11V63VD0BNzB1fGtCb0ngkBD3_S2qzah_#scrollTo=_pr1KnzxGyWQ">notebook</a>.</p>
+            <p class="tex">Try competitions on Kaggle it is fun and good for practicing your skills and keeping uptodate with current technology.</p>
+        </main>
+        <footer>
+            <a href="mailto: sumedhwairagade2gmail.com"><img src="email.png"></a>
+            <a href="https://www.linkedin.com/in/sumedh-wairagade-5b7263151/" target="_blank"><img src="linkedin.png"></a>
+            <a href="https://github.com/SumedhWairagade" target="_blank"><img src="github.png"></a>
+        </footer>
+    </body>
+</html>
