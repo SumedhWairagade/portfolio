@@ -1,54 +1,81 @@
 body{
     vertical-align: middle;
     box-sizing: border-box;
+    background-color: bisque;
 }
 /*header*/
 header{
     padding: 3%;
-    background-color: blueviolet;
+    background-color: rgb(238, 89, 43);
 }
 h1{
     float: left;
 }
-.heade{
-    align-self: center;
+header p{
+    margin-left: 48%;
 }
 .linke{
     float: right;
+    padding: 0.8%;
+    border: 1px solid blue;
+    color: blue;
 }
 /*Main Css Property*/
 main{
-    background-color: yellow;
     margin: auto;
     padding: 10px;
     width: 90%;
-    height: 100%;
+    height: auto;
 }
 .column {
     float: left;
     width: 50%;
+    text-align: center;
 }
 .row:after {
     content: "";
     display: table;
     clear: both;
  }
+.column:hover > .card{
+    cursor: pointer;
+    transform:rotateY(180deg);
+}
 .card{
     padding: 2%;
-    width: 50%;
-    height: 100%;
+    width: 96%;
+    height: 40vh;
+    text-align: center;
+    position: relative;
+    transition: transform 1500ms;
+    transform-style: preserve-3d;
+}
+.front,
+.back{
+    width: 96%;
+    height: 40vh;
+    position: absolute;
+    backface-visibility: hidden;
+}
+.back{
+    text-align: center;
+    background-color: dimgrey;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .pic{
     width: 100%;
-    height: 100%;
-    object-fit: contain;
+    height: 40vh;
 }
 /*footer css properties f3e0d3*/
 footer{
-    width: 100%;
+    width: auto;
     text-align: center;
     background-color: orange;
-    padding: 10px;
+    padding-top: 5px;
 }
 footer img{
     height: 30px;
